@@ -1,0 +1,65 @@
+* {
+  box-sizing: border-box;
+  font-family: 'Work Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+/* Main css begin */
+
+.main {
+  margin-top: 105px;
+  width: 100%;
+  /* background-color: #eaeaea; */
+}
+
+.main .container .main-inner .main-slider {
+  display: flex;
+  flex-direction: column;
+  background: #000;
+  color: #fff;
+}
+
+.main-slider .slider-head h3 {
+  font-size: 32px;
+  font-weight: 600;
+  text-align: center;
+  letter-spacing: 0.5px;
+  line-height: 24px;
+  text-transform: uppercase;
+}
+
+.main-slider .slider-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 30px 0;
+}
+
+.slider-container button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 40px;
+  cursor: pointer;
+}
+
+.slider-container .slider-cards {
+  /* Evvel flex idi */
+  display: flex;
+  gap: 10px;
+  overflow: hidden;
+  /* position: relative; */
+  scroll-behavior:smooth;
+}
+
+
+/* main css end */

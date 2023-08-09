@@ -1,0 +1,78 @@
+.slider-cards .slider-card-item {
+    background: #fff;
+    width: 600px;
+    border-radius: 6px;
+}
+
+.slider-cards .slider-card-item .showcase {
+    cursor: pointer;
+}
+
+.slider-cards .slider-card-item .showcase .showcase-image-container {
+    position: relative;
+}
+
+.showcase .showcase-image-container .showcase-label-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 48px;
+    background: #000;
+    font-size: 19px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80px;
+}
+
+.showcase-image-container .showcase-image {
+    width: 390px;
+}
+
+.showcase-image-container .showcase-image img {
+    width: 100%;
+}
+
+.showcase-image-container .showcase-favorites {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* display: none; */
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.showcase:hover .showcase-image-container .showcase-favorites {
+    /* display: block; */
+    opacity: 1;
+    transition: all 0.5s ease;
+}
+
+.showcase-favorites .show-fav-btn {
+    color: #707070;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 300;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.showcase .showcase-content {
+    display: flex;
+    flex-direction: column;
+    color: #000;
+    padding: 20px;
+}
+
+.showcase-content .showcase-title h3 {
+    line-height: 28px;
+    margin: 0;
+    font-weight: 300;
+}
+
+.showcase-content .showcase-price {
+    align-self: flex-end;
+    font-weight: 600;
+}

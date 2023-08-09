@@ -1,0 +1,129 @@
+.header {
+    background: #000000;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+.header .container .header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header-inner .header-logo {
+    flex-basis: 5%;
+}
+
+.header-inner .header-logo img {
+    width: 100px;
+}
+
+.header-inner .header-navigation {
+    flex-basis: 54%;
+}
+
+.header-inner .header-navigation .nav {
+    display: flex;
+    list-style-type: none;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0;
+}
+
+
+.header-inner .header-navigation a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #fff;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    padding: 40px 0;
+}
+
+.header-inner .header-navigation .nav li a::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 0.1rem;
+    height: 0;
+    background-color: #fff;
+    transition: all 0.3s ease-in-out;
+}
+
+.header-navigation .nav li a:hover::before {
+    height: 2rem;
+}
+
+
+.header-inner .header-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 15%;
+}
+
+.header-buttons button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.header-buttons button .icons {
+    font-size: 25px;
+}
+
+/* Subcategory css */
+.nav .has-sub-category .sublevel-one {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    background: #fff;
+    padding: 30px 10px;
+}
+
+.nav .has-sub-category:hover .sublevel-one {
+    display: block;
+}
+
+.sublevel-one .level-two {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 30px;
+    /* justify-content: space-between; */
+}
+
+.sublevel-one .level-two li{
+    padding: 10px 0;
+    color: #000000;
+}
+
+.sublevel-one .level-two li a{
+    color: #000000;
+    padding: 10px 0;
+}
+
+.level-two li .sublevel-two ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.level-two .sublevel-two ul li a {
+    color: #707070;
+    font-weight: 600;
+    padding: 0;
+    font-size: 14px;
+}
+
+/* subcategory css */
+
