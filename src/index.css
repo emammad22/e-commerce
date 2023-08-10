@@ -42,6 +42,7 @@ body {
   align-items: center;
   justify-content: space-between;
   padding: 30px 0;
+  width: 100%;
 }
 
 .slider-container button {
@@ -53,12 +54,29 @@ body {
 }
 
 .slider-container .slider-cards {
-  /* Evvel flex idi */
-  display: flex;
-  gap: 10px;
   overflow: hidden;
-  /* position: relative; */
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
+  grid-template-columns: repeat(8, 19.5%);
+  display: grid;
+  gap: 10px;
+}
+/* Slider Responsive */
+@media screen and (max-width: 1200px) {
+  .slider-container .slider-cards {
+    grid-template-columns: repeat(8, 24.1%);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .slider-container .slider-cards {
+    grid-template-columns: repeat(8, 32.2%);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .slider-container .slider-cards {
+    grid-template-columns: repeat(8, 50%);
+  }
 }
 
 

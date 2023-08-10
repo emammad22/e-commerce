@@ -1,7 +1,7 @@
 .slider-cards .slider-card-item {
     background: #fff;
-    width: 600px;
     border-radius: 6px;
+    width: 100%;
 }
 
 .slider-cards .slider-card-item .showcase {
@@ -26,8 +26,7 @@
 }
 
 .showcase-image-container .showcase-image {
-    width: 391px;
-
+    width: 100%;
 }
 
 .showcase-image-container .showcase-image img {

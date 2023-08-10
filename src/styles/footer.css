@@ -3,15 +3,16 @@
     background: url('../src/assets/footer-back.svg');
     background-repeat: no-repeat;
     background-position: bottom right;
+    width: 100%;
 }
 
 .footer .container .footer-inner .footer-up {
     background-color: #f6f6f6;
     display: flex;
-    padding: 6.3rem 6rem 6.2rem;
-    justify-content: space-between;
-    /* align-items: center; */
+    padding: 6.3rem 0 6.3rem 2rem;
+    justify-content: space-around;
     gap: 70px;
+    width: 100%;
 }
 
 .footer-up .footer-social {
@@ -21,7 +22,7 @@
 
 .footer-up h3 {
     margin: 0;
-    font-size: 29px;
+    font-size: 20px;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -68,6 +69,7 @@
 .footer-up .footer-subscription {
     display: flex;
     flex-direction: column;
+
 }
 
 .footer-subscription .subscription-info {
@@ -80,7 +82,6 @@
     position: relative;
     border-radius: 50px;
     height: 60px;
-    /* border:1px solid black; */
     background-color: #fff;
     width: 285px;
 }
@@ -112,6 +113,7 @@
 .footer-up .footer-apps {
     display: flex;
     flex-direction: column;
+    flex-basis: calc(100% /3);
 }
 
 .footer-apps .apps-info {
@@ -121,12 +123,11 @@
 
 .footer-apps .apps-button {
     display: flex;
-    /* gap: 20px; */
-    justify-content: space-between;
+    gap: 20px;
 }
 
 .apps-button button {
-    width: 200px;
+    width: 100px;
     height: 50px;
     border: none;
     cursor: pointer;
@@ -145,9 +146,19 @@
 
 .footer-inner .footer-bottom .bottom-first {
     display: flex;
-    /* align-items: center; */
-    gap: 60px;
-    /* justify-content: space-between; */
+    gap: 20px;
+}
+
+.bottom-first .bottom-first-left {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 80%;
+}
+
+.bottom-first .bottom-logo-info {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 20%;
 }
 
 .bottom-first .bottom-logo-info img {
@@ -158,6 +169,7 @@
     display: flex;
     flex-direction: column;
 }
+
 
 .customer-services .customer-phone,
 .customer-email {
@@ -170,14 +182,18 @@
 .fast-access ul,
 .shopping ul,
 .help ul {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
     list-style-type: none;
 }
 
 .bottom-first li {
-    padding: 10px 0;
+    padding: 6px 0;
     cursor: pointer;
     position: relative;
     color: #707070;
+    font-size: 12px;
 }
 
 .bottom-first li::before {
@@ -194,3 +210,59 @@
     border-bottom: 1px solid black;
     transition: all 0.3s ease-in-out;
 }
+
+/* footer responsive Mobile and Tablet */
+
+@media screen and (max-width: 990px) {
+    .footer .container .footer-inner .footer-up {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-up .footer-social,
+    .footer-apps {
+        width: 100%;
+        align-items: center;
+    }
+
+    .footer-up .footer-subscription {
+        width: 100%;
+    }
+
+    .footer-subscription .subscription-form .email-input {
+        width: 100%;
+    }
+
+ 
+    .footer-inner .footer-bottom .bottom-first {
+        flex-direction: column;
+    }
+
+    .bottom-first .bottom-logo-info {
+        align-items: center;
+    }
+
+    .bottom-first .bottom-logo-info img {
+        width: 100%;
+    }
+
+    .bottom-logo-info .customer-services {
+        align-items: center;
+    }
+
+    .bottom-first .institutional ul,
+    .fast-access ul,
+    .shopping ul,
+    .help ul {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .bottom-first li {
+        font-size: 15px;
+    }
+}
+
+/* Footer css end */
