@@ -1,0 +1,32 @@
+.main-inner .cosmetics-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.cosmetics-container .category-head {
+    text-align: center;
+}
+
+
+.category-head .category-name {
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 40px;
+    letter-spacing: 1.2px;
+    margin: 0;
+}
+
+.cosmetics-container .category-inner{
+    display: flex;
+    flex-direction: column;
+}
+
+.category-inner .filter-products{
+    padding: 10px;
+    border-bottom: 1px solid #707070;
+}
+
+.filter-products .filter{
+    display: flex;
+    justify-content: space-between;
+}
