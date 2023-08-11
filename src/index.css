@@ -1,6 +1,11 @@
 * {
   box-sizing: border-box;
   font-family: 'Work Sans', sans-serif;
+  text-decoration: none;
+}
+
+a{
+  color: #000;
 }
 
 body {
@@ -60,6 +65,7 @@ body {
   display: grid;
   gap: 10px;
 }
+
 /* Slider Responsive */
 @media screen and (max-width: 1200px) {
   .slider-container .slider-cards {
@@ -78,4 +84,5 @@ body {
     grid-template-columns: repeat(8, 50%);
   }
 }
+
 /* main css end */

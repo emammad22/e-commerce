@@ -3,6 +3,7 @@ import { AiOutlineSearch, AiOutlineUser } from 'react-icons/ai'
 import { BsBoxSeam, BsBasket } from 'react-icons/bs'
 import logo from '../assets/logo.png'
 import '../styles/header.css'
+import { Link } from 'react-router-dom';
 
 function Header() {
     return (
@@ -10,9 +11,11 @@ function Header() {
             <header className="header">
                 <div className="container">
                     <div className="header-inner">
-                        <div className="header-logo">
-                            <img src={logo} alt="logo" />
-                        </div>
+                        <Link to={'/'}>
+                            <div className="header-logo">
+                                <img src={logo} alt="logo" />
+                            </div>
+                        </Link>
                         <div className="header-navigation">
                             <ul className="nav level-one">
                                 <li className="has-sub-category">
@@ -84,7 +87,7 @@ function Header() {
                                     <a href="#" className="stationary">Stationary</a>
                                 </li>
                                 <li className="has-sub-category">
-                                    <a href="#" className="cosmetics">Cosmetics</a>
+                                    <Link to={'/cosmetics'} className="cosmetics">Cosmetics</Link>
                                 </li>
                                 <li className="has-sub-category">
                                     <a href="#" className="discount">Discounts</a>

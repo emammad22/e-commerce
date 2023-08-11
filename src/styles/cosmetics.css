@@ -16,17 +16,142 @@
     margin: 0;
 }
 
-.cosmetics-container .category-inner{
+.cosmetics-container .category-inner {
     display: flex;
     flex-direction: column;
 }
 
-.category-inner .filter-products{
+.category-inner .filter-products {
     padding: 10px;
     border-bottom: 1px solid #707070;
 }
 
-.filter-products .filter{
+.filter-products .filter {
     display: flex;
     justify-content: space-between;
+}
+
+.filter .left-filter-wrapper {
+    display: flex;
+    justify-content: space-between;
+    flex-basis: 55%;
+}
+
+.filter .number-of-products .num {
+    line-height: 22px;
+    font-size: 18px;
+    margin: 0;
+}
+
+.filter .inStock {
+    padding: 10px 0 20px 0;
+}
+
+.filter .inStock input {
+    margin-right: 10px;
+}
+
+.filter .filter-by-price .price {
+    background: none;
+    border: none;
+    outline: none;
+    width: 170px;
+    padding: 0px 2px 1px;
+    font-size: 15px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.price option {
+    text-transform: none;
+}
+
+@media screen and (max-width:990px) {
+    .filter-products .filter {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .filter .filter-by-price .price {
+        border: 1px solid #eee;
+        width: 400px;
+        padding: 0.6rem 2.8rem 0.6rem 1.2rem;
+    }
+
+    .filter .filter-by-price .price {
+        background-image: url('../assets/formArrow.svg');
+        background-repeat: no-repeat;
+        background-position: right 1.2rem center;
+        background-size: 0.6rem 0.8rem;
+        background-color: #fff;
+        appearance: none;
+    }
+}
+
+/* Cosmetics Products List CSS */
+
+.category-inner .product-list {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product-list .product-showcase{
+    /* width: 467px; */
+    flex-basis: 25%;
+    display: flex;
+    padding: 50px 0 0 0;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 32px;
+    text-decoration: none;
+}
+
+.product-list .product-showcase .product-list-item {
+    cursor: pointer;
+
+}
+
+.product-list-item .product-image-container .product-favorites {
+    position: absolute;
+    top: 10px;
+    right: 0;
+}
+
+.product-favorites .product-add-favorite {
+    border-radius: 50%;
+    background: #fff;
+    font-size: 1.2rem;
+    cursor: pointer;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    opacity: 0;
+    transition: all 0.3s ease-in;
+    box-shadow: 2px 2px 2px rgba(185, 185, 185, .2);
+}
+
+.product-list-item:hover .product-image-container .product-favorites .product-add-favorite {
+    opacity: 1;
+}
+
+.product-list-item .product-content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.product-content .product-title{
+    align-items: start;
+}
+.product-content .product-price{
+    align-self: end;
+}
+
+.product-price .prod-price{
+    margin: 0;
 }
