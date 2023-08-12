@@ -1,0 +1,24 @@
+.category-inner .navigation{
+    align-self: center;
+}
+
+.navigation .pagination{
+    align-self: center;
+    display: flex;
+    gap: 10px;
+    list-style-type: none;
+}
+
+.pagination .page-item{
+    cursor: pointer;
+    padding: 0 25px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.page-item.active{
+    border: 1px solid #eaeaea;
+
+}

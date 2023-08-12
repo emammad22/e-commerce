@@ -91,18 +91,18 @@
 /* Cosmetics Products List CSS */
 
 .category-inner .product-list {
-    display: flex;
-    width: 100%;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    /* display: flex;
+    flex-wrap: wrap; */
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
 }
 
-.product-list .product-showcase{
-    /* width: 467px; */
-    flex-basis: 25%;
+.product-list .product-showcase {
     display: flex;
     padding: 50px 0 0 0;
     justify-content: center;
+    align-items: center;
     position: relative;
     margin-bottom: 32px;
     text-decoration: none;
@@ -110,7 +110,6 @@
 
 .product-list .product-showcase .product-list-item {
     cursor: pointer;
-
 }
 
 .product-list-item .product-image-container .product-favorites {
@@ -139,19 +138,30 @@
     opacity: 1;
 }
 
-.product-list-item .product-content{
+.product-list-item .product-image-container .product-image img{
+    width: 100%;
+}
+
+.product-list-item .product-content {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
-.product-content .product-title{
+.product-content .product-title {
     align-items: start;
 }
-.product-content .product-price{
+
+.product-content .product-price {
     align-self: end;
 }
 
-.product-price .prod-price{
+.product-price .prod-price {
     margin: 0;
+}
+
+@media screen and (max-width: 990px) {
+    .category-inner .product-list{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }

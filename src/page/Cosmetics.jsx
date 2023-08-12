@@ -1,5 +1,7 @@
 import FilterProducts from '../components/FilterProducts';
 import ProductList from '../components/Products/ProductList';
+import Pagination from '../components/ReusablePagination/Pagination';
+import '../styles/pagination.css'
 
 
 function Cosmetics() {
@@ -18,7 +20,7 @@ function Cosmetics() {
                 <div className="category-inner">
                     <FilterProducts />
                     <ProductList />
-                    <div className="pagination"></div>
+                    <Pagination total = {14} perPage={12}/>
                 </div>
             </div>
         </>

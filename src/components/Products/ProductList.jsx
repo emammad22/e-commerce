@@ -8,10 +8,18 @@ function ProductList() {
                 <Link to={'/cosmetics/productId'}>
                     <ProductListItem />
                 </Link>
-                <ProductListItem />
-                <ProductListItem />
-                <ProductListItem />
-                <ProductListItem />
+                <Link to={'/cosmetics/productId'}>
+                    <ProductListItem />
+                </Link>
+                <Link to={'/cosmetics/productId'}>
+                    <ProductListItem />
+                </Link>
+                <Link to={'/cosmetics/productId'}>
+                    <ProductListItem />
+                </Link>
+                <Link to={'/cosmetics/productId'}>
+                    <ProductListItem />
+                </Link>
             </div>
         </>
     );

@@ -22,13 +22,14 @@ body {
 
 .main {
   margin-top: 105px;
+  padding: 5px 20px;
   width: 100%;
   /* background-color: #eaeaea; */
 }
 
 .main .container .main-inner .main-slider {
   display: flex;
-  flex-direction: column;
+  flex-direction: column; 
   background: #000;
   color: #fff;
 }
