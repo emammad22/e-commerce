@@ -3,8 +3,8 @@ import { FaYoutube, FaInstagram } from 'react-icons/fa'
 import { MdOutlineKeyboardArrowRight } from 'react-icons/md'
 import { IoLogoGooglePlaystore, IoLogoApple } from 'react-icons/io5'
 import { FiPhone, FiMail } from 'react-icons/fi'
-import logo from '../assets/footerlogo.png'
-import '../styles/footer.css'
+import logo from '../../assets/footerlogo.png'
+import '../../styles/footer.css'
 
 
 function Footer() {

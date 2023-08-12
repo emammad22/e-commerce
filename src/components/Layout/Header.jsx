@@ -1,11 +1,20 @@
 import { MdOutlineFavoriteBorder } from 'react-icons/md';
 import { AiOutlineSearch, AiOutlineUser } from 'react-icons/ai'
 import { BsBoxSeam, BsBasket } from 'react-icons/bs'
-import logo from '../assets/logo.png'
-import '../styles/header.css'
+import logo from '../../assets/logo.png'
+import '../../styles/header.css'
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import SearchBox from '../Search/SearchBox';
 
 function Header() {
+
+    const [toggleSearch, setToggleSearch] = useState(false);
+
+    function handleSearchBox() {
+        toggleSearch ? setToggleSearch(false) : setToggleSearch(true);
+    }
+
     return (
         <>
             <header className="header">
@@ -96,12 +105,14 @@ function Header() {
                         </div>
                         <div className="header-buttons">
                             <button className="cargo"><BsBoxSeam className='icons' /></button>
-                            <button className="search"><AiOutlineSearch className='icons' /></button>
+                            <button className="search" onClick={handleSearchBox}><AiOutlineSearch className='icons' /></button>
                             <button className="favorite"><MdOutlineFavoriteBorder className='icons' /></button>
                             <button className="user"><AiOutlineUser className='icons' /></button>
                             <button className="basket"><BsBasket className='icons' /></button>
                         </div>
                     </div>
+
+                    <SearchBox handleSearchBox={handleSearchBox} active={toggleSearch}/>
                 </div>
             </header>
         </>

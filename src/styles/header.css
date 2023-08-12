@@ -31,6 +31,7 @@
     justify-content: space-between;
     align-items: center;
     margin: 0;
+    gap: 20px;
 }
 
 
@@ -42,7 +43,8 @@
     font-size: 16px;
     font-weight: 600;
     position: relative;
-    padding: 40px 0;
+    padding: 39px 0;
+    line-height: 1.6rem;
 }
 
 .header-inner .header-navigation .nav li a::before {
@@ -79,6 +81,12 @@
     font-size: 25px;
 }
 
+@media screen and (max-width : 1270px) {
+    .header-inner .header-navigation a {
+        font-size: 13px;
+    }
+}
+
 /* Subcategory css */
 .nav .has-sub-category .sublevel-one {
     display: none;
@@ -103,17 +111,17 @@
     /* justify-content: space-between; */
 }
 
-.sublevel-one .level-two li{
+.sublevel-one .level-two li {
     padding: 10px 0;
     color: #000000;
 }
 
-.sublevel-one .level-two li a{
+.sublevel-one .level-two li a {
     color: #000000;
     padding: 10px 0;
 }
 
-.level-two li .sublevel-two ul{
+.level-two li .sublevel-two ul {
     list-style-type: none;
     padding: 0;
 }
@@ -127,3 +135,72 @@
 
 /* subcategory css */
 
+/* Search Box css */
+
+.container .search-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: none;
+}
+
+.search-container.active-search {
+    display: block;
+}
+
+.search-container .search-box {
+    width: 100%;
+    background: #000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7rem 1rem 5.4rem;
+}
+
+.search-box .search-form {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form label {
+    display: inline-block;
+    padding: 0 10px 0 0;
+    border-right: 1px solid #eaeaea;
+}
+
+.search-form label .search-icon {
+    font-size: 32px;
+}
+
+.search-box .search-form input {
+    width: 90%;
+    border: none;
+    padding: 1rem 7rem 1rem 0.4rem;
+    background: none;
+    font-size: 18px;
+    color: #fff;
+    outline: none;
+}
+
+.search-box .search-form input::placeholder {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.search-box .close-search {
+    display: flex;
+    justify-content: center;
+}
+
+.search-box .close-search .search-btn {
+    border: none;
+    background: none;
+    color: #fff;
+    font-size: 32px;
+    cursor: pointer;
+}
